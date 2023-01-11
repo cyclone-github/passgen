@@ -11,6 +11,7 @@ import (
 
 // version history
 // v0.1.0, 2023-01-10; initial release
+// v0.1.1, 2023-01-11; added sanity checks to passwordLength & passwordCount inputs
 
 // clear screen function
 func clearScreen() {
@@ -60,7 +61,7 @@ func main() {
 	for {
 		fmt.Print("Password length: ")
 		fmt.Scan(&passwordLength)
-		if passwordLength < 8 {
+		if passwordLength < 8 || passwordLength > 1000 {
 			fmt.Println("Invalid password length")
 		} else {
 			break
@@ -70,7 +71,8 @@ func main() {
 	for {
 		fmt.Print("Number of passwords to generate: ")
 		fmt.Scan(&passwordCount)
-		if passwordCount < 1 {
+		if passwordCount < 1 || passwordCount > 100000 {
+			fmt.Println("Invalid password count")
 		} else {
 			break
 		}
