@@ -1,17 +1,20 @@
 package main
 
 import (
+	"bytes"
+	r "crypto/rand"
+	"encoding/binary"
 	"fmt"
 	"math/rand"
 	"os"
 	"os/exec"
 	"runtime"
-	"time"
 )
 
 // version history
 // v0.1.0, 2023-01-10; initial release
 // v0.1.1, 2023-01-11; added sanity checks to passwordLength & passwordCount inputs
+// v0.1.2, 2023-02-09; use "crypto/rand" to create password seed
 
 // clear screen function
 func clearScreen() {
@@ -31,13 +34,28 @@ func clearScreen() {
 	}
 }
 
+func generateSeedKey() int64 {
+	b := make([]byte, 16)
+	_, err := r.Read(b)
+	if err != nil {
+		fmt.Println("Error:", err)
+		return 0
+	}
+
+	var seed int64
+	binary.Read(bytes.NewReader(b), binary.BigEndian, &seed)
+	return seed
+}
+
 func RandPassGen(n int) string {
 	var alphaChars = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
 	var digitChars = []rune("0123456789")
 	var specialChars = []rune("!@#$%^&*()_+-=[]{}\\|;':\"<>,.?/")
-	rand.Seed(time.Now().UnixNano())
+
 	b := make([]rune, n)
 	for i := range b {
+		seed := generateSeedKey()
+		rand.Seed(seed)
 		r := rand.Intn(3)
 		if r == 0 {
 			b[i] = alphaChars[rand.Intn(len(alphaChars))]
