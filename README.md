@@ -1,4 +1,4 @@
-# Cyclone PassGen
+# Cyclone's PassGen
 
 Password generator which creates passwords using upper / lower / digit & special char. Password length must be >= 8 char. Can be used to create 1 or more passwords by using CLI interface.
 
@@ -31,3 +31,6 @@ $s9Fb55kw!8&cr<[@07U
 Q:72uD4r5?4={!+06}9g
 
 72^D1P>5rj35}\1??!Y$
+
+Compile from source code info:
+- https://github.com/cyclone-github/scripts/blob/main/intro_to_go.txt
