@@ -23,5 +23,13 @@ f+Z89]J4v$l5}e2W<81I
 .O;&&at<1MC^76N.{{'4
 *u15$4,A-5R9K]3OjX8p
 ```
-### Compile from source code info:
-- https://github.com/cyclone-github/scripts/blob/main/intro_to_go.txt
+### Compile from source:
+- If you want the latest features, compiling from source is the best option since the release version may run several revisions behind the source code.
+- This assumes you have Go and Git installed
+  - `git clone https://github.com/cyclone-github/passgen.git`
+  - `cd passgen`
+  - `go mod init passgen`
+  - `go mod tidy`
+  - `go build -ldflags="-s -w" .`
+- Compile from source code how-to:
+  - https://github.com/cyclone-github/scripts/blob/main/intro_to_go.txt
