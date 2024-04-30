@@ -1,3 +1,5 @@
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cyclone-github&repo=passgen&theme=gruvbox)](https://github.com/cyclone-github/)
+
 # Cyclone's PassGen
 ![image](https://i.imgur.com/9XzZVIm.png)
 
@@ -32,4 +34,4 @@ f+Z89]J4v$l5}e2W<81I
   - `go mod tidy`
   - `go build -ldflags="-s -w" .`
 - Compile from source code how-to:
-  - https://github.com/cyclone-github/scripts/blob/main/intro_to_go.txt
+  - https://github.com/cyclone-github/scripts/blob/main/intro_to_go.txt.txt
