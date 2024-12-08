@@ -1,4 +1,10 @@
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cyclone-github&repo=passgen&theme=gruvbox)](https://github.com/cyclone-github/)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cyclone-github&repo=passgen&theme=gruvbox)](https://github.com/cyclone-github/passgen/)
+
+[![Go Report Card](https://goreportcard.com/badge/github.com/cyclone-github/passgen)](https://goreportcard.com/report/github.com/cyclone-github/passgen)
+[![GitHub issues](https://img.shields.io/github/issues/cyclone-github/passgen.svg)](https://github.com/cyclone-github/passgen/issues)
+[![License](https://img.shields.io/github/license/cyclone-github/passgen.svg)](LICENSE)
+[![GitHub release](https://img.shields.io/github/release/cyclone-github/passgen.svg)](https://github.com/cyclone-github/passgen/releases)
+[![Go Reference](https://pkg.go.dev/badge/github.com/cyclone-github/passgen.svg)](https://pkg.go.dev/github.com/cyclone-github/passgen)
 
 # Cyclone's PassGen
 ![image](https://i.imgur.com/9XzZVIm.png)
